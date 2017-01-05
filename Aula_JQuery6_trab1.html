@@ -1,0 +1,171 @@
+<html>
+
+<head>
+
+<script src="jquery-3.1.1.min.js"></script>
+
+<script src="jquery-ui.min.js"></script>
+
+<script type="text/javascript" charset="utf-8" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+
+<script type="text/javascript" charset="utf-8"></script>
+
+<script> 
+
+$(document).ready(function(){
+        $("#desejo").hide();
+        $("#menu").hide();
+        $("#meme").hide();
+
+    $("#flip").click(function(){
+        $("#panel").slideDown(5000);
+        $("#img").show();
+        $("#desejo").show();
+    });
+    
+    $("#stop").click(function(){
+        $("#panel").stop();        
+    	$("#img").hide();
+    });
+
+      $("#flip2").click(function(){
+        $("#panel").slideUp(5000);
+        $("#img").show(); 
+        $("#meme").hide();
+        $("#desejo").hide();       
+    });
+
+       $( function() {
+    	$("input").checkboxradio();
+  	});
+
+         $("#menu").click(function(){
+    	 $("#continer").load(this.href "#container p");
+    	 return false;
+    });
+
+       $("#btdsj").click(function(){
+       	$("#meme").show();
+
+    });
+
+
+  });
+
+$( function() {
+    function runEffect() {
+      var selectedEffect = $( "#effectTypes" ).val();
+      var options = {};
+ 
+      $( "body" ).effect( selectedEffect, options, 500, callback );
+    };
+ 
+    function callback() {
+      setTimeout(function() {
+        $( "#effect" ).removeAttr( "style" ).hide().fadeIn();
+      }, 1000 );
+
+    };
+ 
+    $( "#btdsj" ).on( "click", function() {
+      runEffect();
+      return false;
+
+    });
+
+    $( function() {
+    $( "#selectable" ).selectable();
+  } );
+  } );
+
+</script> 
+
+<style> 
+#panel, #flip, #flip2 {
+    padding: 5px;
+    font-size: 18px;
+    text-align: center;
+    background-color: #555;
+    color: white;
+    border: solid 1px #666;
+    border-radius: 3px;
+}
+
+#panel {
+    padding: 50px;
+    display: none;
+}
+
+    .toggler { width: 500px; height: 200px; position: relative; }
+    #button { padding: .5em 1em; text-decoration: none; }
+    #effect { width: 240px; height: 170px; padding: 0.4em; position: relative; }
+    #effect h3 { margin: 0; padding: 0.4em; text-align: center; }
+    .ui-effects-transfer { border: 2px dotted gray; 
+}
+
+  #feedback { font-size: 1.4em; }
+  #selectable .ui-selecting { background: #FECA40; }
+  #selectable .ui-selected { background: #F39814; color: white; }
+  #selectable { list-style-type: none; margin: 0; padding: 0; width: 60%; }
+
+  #selectable li { margin: 3px; padding: 0.4em; font-size: 1.4em; height: 18px; 
+}
+
+</style>
+
+</head>
+
+<body background="IMG/icon6.png">
+
+	<button id="stop"> Stop silding </button>
+	
+	<div id="flip"> Reveal The Meme Shenlong </div>
+	<div id="panel"> <img src="IMG/icon5.jpg" id="img"> </div>
+	<div id="flip2"> Hide The Meme Shenlong </div>
+	<div id="panel"> <img src="IMG/icon5.jpg" id="img"> </div>
+
+<div class="toggler" id="desejo">
+  <div id="effect" class="ui-widget-content ui-corner-all">
+    <h2 class="ui-widget-header ui-corner-all"> Pede um Desejo </h2>    
+    <div class="widget"> 
+     
+    <h4><ol id="selectable"><label for="radio-1"> Faz-me um meme </label>
+    <input type="radio" name="radio-1" id="radio-1"><br>
+    <label for="radio-1"> Dá-me sabedoria de memes </label>
+    <input type="radio" name="radio-1" id="radio-1"><br>
+    <label for="radio-1"> Dá-me uma ideia </label>
+    <input type="radio" name="radio-1" id="radio-1"></h4>     
+
+    </div> 
+  </div>
+</div>
+
+</ol>
+ 
+<select name="effects" id="effectTypes">
+
+  <option value="bounce">Bounce</option>
+
+</select>
+ 
+<div id="flip2" class="ui-state-default ui-corner-all">
+
+<button id="btdsj" class="ui-state-default ui-corner-all"> Pedir desejo </button></div>
+
+  <div id="meme">
+
+  <img src="IMG/icon4.jpg" id="meme">
+
+  <p id="menu">
+
+  <a href="Aula_JQuery6_trab1.html"> EX 1 </a> |
+  <a href="pictures.html"> EX 2 </a> |
+  <a href="pictures2.html"> EX 3 </a> |
+
+</p>
+  
+</div>
+
+</body>
+
+</html>
